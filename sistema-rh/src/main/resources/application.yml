@@ -1,11 +1,8 @@
-spring: 
+# Escolher qual banco de dados será usado de acordo com o ambiente
+spring:
+  profiles:
+    active:
+    - test
   application: 
-    name: sistema-rh
-  datasource:
-    url: jdbc:postgresql://localhost:5432/rh
-    password: admin
-    username: postgres
-    driver-class-name: org.postgresql.Driver
-  jpa: 
-    hibernate: 
-      ddl-auto: update 
+   name: sistema-rh
+   

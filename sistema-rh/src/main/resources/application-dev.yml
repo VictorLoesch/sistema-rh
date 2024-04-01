@@ -1,0 +1,13 @@
+# Banco de dados postegres para ambiente de desenvolvimento
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/rh
+    password: admin
+    username: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate: 
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    hibernate: 
+      ddl-auto: update 
