@@ -11,9 +11,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 
 @Entity
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Departamento implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -27,84 +33,11 @@ public class Departamento implements Serializable{
 	private String nome;
 	
 	@OneToMany(mappedBy = "departamento")
-	private List<Usuarios> funcionarios;
+	private List<Usuario> funcionarios;
 	
 	@ManyToOne
 	@JoinColumn(name = "responsavel_id")
-	private Usuarios responsavel;
-	
-	
-// ------------------------------------- Construtores --------------------------------------------	
-	
-	public Departamento() {}
-
-
-	public Departamento(String nome, List<Usuarios> funcionarios, Usuarios responsavel) {
-		super();
-		this.nome = nome;
-		this.funcionarios = funcionarios;
-		this.responsavel = responsavel;
-	}
-
-
-// ------------------------------------- Geters e seters  --------------------------------------------	
-	
-	
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
-	public List<Usuarios> getFuncionarios() {
-		return funcionarios;
-	}
-
-	public void setFuncionarios(List<Usuarios> funcionarios) {
-		this.funcionarios = funcionarios;
-	}
-
-	public Usuarios getResponsavel() {
-		return responsavel;
-	}
-
-	public void setResponsavel(Usuarios responsavel) {
-		this.responsavel = responsavel;
-	}
-
-	
-// ------------------------------------- Equals e hashCode --------------------------------------------	
-	
-	
-	@Override
-	public int hashCode() {
-		return Objects.hash(funcionarios, id, nome, responsavel);
-	}
-
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Departamento other = (Departamento) obj;
-		return Objects.equals(funcionarios, other.funcionarios) && Objects.equals(id, other.id)
-				&& Objects.equals(nome, other.nome) && Objects.equals(responsavel, other.responsavel);
-	}
-	
+	private Usuario responsavel;
 	
 	
 // ------------------------------------- Metodos auxiliares --------------------------------------------	
