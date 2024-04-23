@@ -15,6 +15,11 @@
 	<description>Sistema de gerenciamento de RH</description>
 	<properties>
 		<java.version>21</java.version>
+		<jackson.version>2.16.1</jackson.version>
+		<h2.version>2.1.214</h2.version>
+		<flyway.version>10.8.1</flyway.version>
+		<dozzer.version>7.0.0</dozzer.version>
+		<lombok.version>1.18.32</lombok.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -46,6 +51,67 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-core -->
+		<dependency>
+		    <groupId>org.flywaydb</groupId>
+		    <artifactId>flyway-core</artifactId>
+		    <version>${flyway.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+		<dependency>
+		    <groupId>com.h2database</groupId>
+		    <artifactId>h2</artifactId>
+		    <version>${h2.version}</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-yaml -->
+		<dependency>
+		    <groupId>com.fasterxml.jackson.dataformat</groupId>
+		    <artifactId>jackson-dataformat-yaml</artifactId>
+		    <version>${jackson.version}</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.fasterxml.jackson.dataformat</groupId>
+		    <artifactId>jackson-dataformat-xml</artifactId>
+		    <version>${jackson.version}</version>
+		</dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-databind</artifactId>
+	        <version>${jackson.version}</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-annotations</artifactId>
+	        <version>${jackson.version}</version>
+	    </dependency>
+	    <dependency>
+	        <groupId>com.fasterxml.jackson.core</groupId>
+	        <artifactId>jackson-core</artifactId>
+	        <version>${jackson.version}</version>
+	    </dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.dozermapper/dozer-core -->
+		<dependency>
+		    <groupId>com.github.dozermapper</groupId>
+		    <artifactId>dozer-core</artifactId>
+		    <version>${dozzer.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jdbc</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -53,6 +119,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- https://mvnrepository.com/artifact/org.flywaydb/flyway-maven-plugin -->
+			<plugin>
+			    <groupId>org.flywaydb</groupId>
+			    <artifactId>flyway-maven-plugin</artifactId>
+			    <version>${flyway.version}</version>
+			    <executions>
+			    </executions>
 			</plugin>
 		</plugins>
 	</build>

@@ -1,5 +1,7 @@
 # Banco de dados h2 para ambiente de testes
 spring:
+  flyway:
+    enabled: true
   datasource:
     url: jdbc:h2:mem:db_teste
     driver-class-name: org.h2.Driver
