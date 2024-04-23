@@ -1,0 +1,10 @@
+insert into Cargo (nome, descricao) values ('Database Administrator II', 'expedite strategic models');
+insert into Cargo (nome, descricao) values ('Senior Editor', 'unleash B2C networks');
+insert into Cargo (nome, descricao) values ('Biostatistician III', 'extend out-of-the-box infomediaries');
+insert into Cargo (nome, descricao) values ('Automation Specialist IV', 'reintermediate end-to-end networks');
+insert into Cargo (nome, descricao) values ('Account Representative IV', 'deliver innovative communities');
+insert into Cargo (nome, descricao) values ('Business Systems Development Analyst', 'mesh dot-com web-readiness');
+insert into Cargo (nome, descricao) values ('Social Worker', 'engineer open-source schemas');
+insert into Cargo (nome, descricao) values ('Marketing Manager', 'morph B2C paradigms');
+insert into Cargo (nome, descricao) values ('Structural Engineer', 'deliver frictionless e-markets');
+insert into Cargo (nome, descricao) values ('Research Associate', 'transform collaborative markets');

@@ -1,0 +1,15 @@
+UPDATE Departamento SET responsavel_id = 5 WHERE id = 1;
+UPDATE Departamento SET responsavel_id = 9 WHERE id = 2;
+UPDATE Departamento SET responsavel_id = 35 WHERE id = 3;
+UPDATE Departamento SET responsavel_id = 98 WHERE id = 4;
+UPDATE Departamento SET responsavel_id = 11 WHERE id = 5;
+UPDATE Departamento SET responsavel_id = 88 WHERE id = 6;
+UPDATE Departamento SET responsavel_id = 23 WHERE id = 7;
+UPDATE Departamento SET responsavel_id = 46 WHERE id = 8;
+UPDATE Departamento SET responsavel_id = 3 WHERE id = 9;
+UPDATE Departamento SET responsavel_id = 6 WHERE id = 10;
+UPDATE Departamento SET responsavel_id = 67 WHERE id = 11;
+UPDATE Departamento SET responsavel_id = 92 WHERE id = 12;
+UPDATE Departamento SET responsavel_id = 41 WHERE id = 13;
+UPDATE Departamento SET responsavel_id = 83 WHERE id = 14;
+UPDATE Departamento SET responsavel_id = 29 WHERE id = 15;
